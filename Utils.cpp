@@ -21,9 +21,14 @@ void Utils::PrintResult(const vector<double>& v, const int&p, const int& width)
 	}
 }
 
-void Utils::PrintFile(const vector<vector<double>>& v, const int& n)
+void Utils::PrintFile(const vector<vector<double>>& v, const V1DS& s ,const int& n)
 {
 	cout << "\n       ";
+
+
+	for(UINT i =0; i < s.size();i++)
+		std::cout << std::left << std::setw(6) << s[i];
+	std::cout << "\n";
 	for(UINT i = 0; i < n;i++)
 	{
 		for(UINT j = 0; j < v[0].size();j++)
